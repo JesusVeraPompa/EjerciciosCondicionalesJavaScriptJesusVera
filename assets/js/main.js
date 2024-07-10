@@ -64,9 +64,19 @@ setTimeout(function () {
             alert("Realizar un programa que dado 2 números imprima por consola si el primer numero es mayor que el segundo.");
             let PrimerNumeroEjercicio1 = prompt("Ingresa un Primer Numero");
             let SegundoNumeroEjercicio1 = prompt("Ingresa un Segundo Numero");
-            alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            if (PrimerNumeroEjercicio1 > SegundoNumeroEjercicio1) {
-                console.log("El Primer Numero es Mayor que el Segundo Numero");
+            var ValoresAceptados = /^[0-9]+$/;
+            if (PrimerNumeroEjercicio1 == "" || SegundoNumeroEjercicio1 == "") {
+                alert("ERROR: No puede Ingresar un Valor Vacio");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            } else if (PrimerNumeroEjercicio1.match(ValoresAceptados) && SegundoNumeroEjercicio1.match(ValoresAceptados)) {
+                alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                if (PrimerNumeroEjercicio1 > SegundoNumeroEjercicio1) {
+                    console.log("El Primer Numero es Mayor que el Segundo Numero");
+                }
+                break;
+            } else {
+                alert("ERROR: Debes ingresar un Valor Numerico");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
             }
             break;
 
@@ -75,12 +85,22 @@ setTimeout(function () {
             alert("Realizar un programa que dado 2 números imprima por consola si los numeros son iguales o si son diferentes.");
             let PrimerNumeroEjercicio2 = prompt("Ingresa un Primer Numero");
             let SegundoNumeroEjercicio2 = prompt("Ingresa un Segundo Numero");
-            alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            if (PrimerNumeroEjercicio2 != SegundoNumeroEjercicio2) {
-                console.log("Primer Numero es DIFERENTE al Segundo");
+            var ValoresAceptados = /^[0-9]+$/;
+            if (PrimerNumeroEjercicio2 == "" || SegundoNumeroEjercicio2 == "") {
+                alert("ERROR: No puede Ingresar un Valor Vacio");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            } else if (PrimerNumeroEjercicio2.match(ValoresAceptados) && SegundoNumeroEjercicio2.match(ValoresAceptados)) {
+                alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                if (PrimerNumeroEjercicio2 != SegundoNumeroEjercicio2) {
+                    console.log("Primer Numero es DIFERENTE al Segundo");
+                } else {
+                    console.log("Primer Numero es IGUAL al Segundo");
+                }
             } else {
-                console.log("Primer Numero es IGUAL al Segundo");
+                alert("ERROR: Debes ingresar un Valor Numerico");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
             }
+
             break;
 
         case "3":
@@ -88,16 +108,27 @@ setTimeout(function () {
             alert("Realizar un programa que dado 2 números imprima por consola cual de los 2 numeros es el mas grande o si son iguales.");
             let PrimerNumeroEjercicio3 = prompt("Ingresa un Primer Numero");
             let SegundoNumeroEjercicio3 = prompt("Ingresa un Segundo Numero");
-            alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            if (PrimerNumeroEjercicio3 < SegundoNumeroEjercicio3) {
-                console.log("El Segundo Numero es el mas GRANDE");
+
+            var ValoresAceptados = /^[0-9]+$/;
+            if (PrimerNumeroEjercicio3 == "" || SegundoNumeroEjercicio3 == "") {
+                alert("ERROR: No puede Ingresar un Valor Vacio");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            } else if (PrimerNumeroEjercicio3.match(ValoresAceptados) && SegundoNumeroEjercicio3.match(ValoresAceptados)) {
+                alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                if (PrimerNumeroEjercicio3 < SegundoNumeroEjercicio3) {
+                    console.log("El Segundo Numero es el mas GRANDE");
+                }
+                if (PrimerNumeroEjercicio3 > SegundoNumeroEjercicio3) {
+                    console.log("El Primer Numero es el mas GRANDE");
+                }
+                if (PrimerNumeroEjercicio3 == SegundoNumeroEjercicio3) {
+                    console.log("Los 2 numeros son IGUALES");
+                }
+            } else {
+                alert("ERROR: Debes ingresar un Valor Numerico");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
             }
-            if (PrimerNumeroEjercicio3 > SegundoNumeroEjercicio3) {
-                console.log("El Primer Numero es el mas GRANDE");
-            }
-            if (PrimerNumeroEjercicio3 == SegundoNumeroEjercicio3) {
-                console.log("Los 2 numeros son IGUALES");
-            }
+
             break;
 
         case "4":
@@ -106,17 +137,31 @@ setTimeout(function () {
             let PrimerNumeroEjercicio4 = prompt("Ingresa un Primer Numero");
             let SegundoNumeroEjercicio4 = prompt("Ingresa un Segundo Numero");
             let TercerNumeroEjercicio4 = prompt("Ingresa un Tercer Numero");
-            alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            if (PrimerNumeroEjercicio4 < SegundoNumeroEjercicio4) {
-                ValorMedio = PrimerNumeroEjercicio4;
+            var ValoresAceptados = /^[0-9]+$/;
+            if (PrimerNumeroEjercicio4 == "" || SegundoNumeroEjercicio4 == "" || TercerNumeroEjercicio4 == "") {
+                alert("ERROR: No puede Ingresar un Valor Vacio");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            } else if (
+                PrimerNumeroEjercicio4.match(ValoresAceptados) &&
+                SegundoNumeroEjercicio4.match(ValoresAceptados) &&
+                TercerNumeroEjercicio4.match(ValoresAceptados)
+            ) {
+                alert("Ver el Resultado por Consola F12, vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                if (PrimerNumeroEjercicio4 < SegundoNumeroEjercicio4) {
+                    ValorMedio = PrimerNumeroEjercicio4;
+                } else {
+                    ValorMedio = SegundoNumeroEjercicio4;
+                }
+                if (ValorMedio < TercerNumeroEjercicio4) {
+                    console.log(ValorMedio, "Es el mas CHICO");
+                } else {
+                    console.log(TercerNumeroEjercicio4, "Es el mas CHICO");
+                }
             } else {
-                ValorMedio = SegundoNumeroEjercicio4;
+                alert("ERROR: Debes ingresar un Valor Numerico");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
             }
-            if (ValorMedio < TercerNumeroEjercicio4) {
-                console.log(ValorMedio, "Es el mas CHICO");
-            } else {
-                console.log(TercerNumeroEjercicio4, "Es el mas CHICO");
-            }
+
             break;
 
         case "5":
@@ -130,6 +175,7 @@ setTimeout(function () {
             let NombreSegundaPersonaEjercicio5 = prompt("Ingresa el NOMBRE de la SEGUNDA Persona");
             let EdadSegundaPersonaEjercicio5 = prompt("Ingresa la EDAD de la SEGUNDA Persona");
             let AlturaSegundaPersonaEjercicio5 = prompt("Ingresa la ALTURA de la SEGUNDA Persona");
+            
             if (AlturaPrimeraPersonaEjercicio5 < AlturaSegundaPersonaEjercicio5) {
                 alert(NombreSegundaPersonaEjercicio5 + " es mas Alto/Alta que " + NombrePrimeraPersonaEjercicio5);
             } else {
