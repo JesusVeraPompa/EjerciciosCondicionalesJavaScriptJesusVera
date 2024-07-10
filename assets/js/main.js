@@ -342,9 +342,52 @@ setTimeout(function () {
             alert(
                 "Crear un programa que permita el ingreso de “PIEDRA”, “PAPEL” o “TIJERAS” a 2 jugadores y muestre en pantalla cual de los 2 ha ganado o si han empatado. En caso de algún ingreso incorrecto mostrar por pantalla que uno de los jugadores ha hecho trampa."
             );
-            let NombrePrimeraPersonaEjercicio10 = prompt("Ingresa tu NOMBRE");
+            let NombrePrimerJugadorEjercicio10 = prompt("Ingresa el NOMBRE del Primer Jugador");
+            let OpcionPrimerJugadorEjercicio10 = prompt("Ingresa 'PIEDRA' o 'PAPEL' o 'TIJERA'");
+            let NombreSegundoJugadorEjercicio10 = prompt("Ingresa el NOMBRE del Segundo Jugador");
+            let OpcionSegundoJugadorEjercicio10 = prompt("Ingresa 'PIEDRA' o 'PAPEL' o 'TIJERA'");
+            let CorrecionOpcionPrimerJugador = OpcionPrimerJugadorEjercicio10.toUpperCase();
+            let CorrecionOpcionSegundoJugador = OpcionSegundoJugadorEjercicio10.toUpperCase();
+            if (CorrecionOpcionPrimerJugador == "PIEDRA" || CorrecionOpcionPrimerJugador == "PAPEL" || CorrecionOpcionPrimerJugador == "TIJERA") {
+                if (
+                    CorrecionOpcionSegundoJugador == "PIEDRA" ||
+                    CorrecionOpcionSegundoJugador == "PAPEL" ||
+                    CorrecionOpcionSegundoJugador == "TIJERA"
+                ) {
+                    if (CorrecionOpcionPrimerJugador == CorrecionOpcionSegundoJugador) {
+                        alert("EMPATE");
+                    } else if (CorrecionOpcionPrimerJugador == "PIEDRA" && CorrecionOpcionSegundoJugador == "TIJERA") {
+                        alert(NombrePrimerJugadorEjercicio10 + " El Primer Jugador, Ha GANADO, PIEDRA destruye TIJERA");
+                    } else if (CorrecionOpcionPrimerJugador == "TIJERA" && CorrecionOpcionSegundoJugador == "PIEDRA") {
+                        alert(NombreSegundoJugadorEjercicio10 + " El Segundo Jugador, Ha GANADO, PIEDRA destruye TIJERA");
+                    } else if (CorrecionOpcionPrimerJugador == "PAPEL" && CorrecionOpcionSegundoJugador == "PIEDRA") {
+                        alert(NombrePrimerJugadorEjercicio10 + " El Primer Jugador, Ha GANADO, PAPEL destruye PIEDRA");
+                    } else if (CorrecionOpcionPrimerJugador == "PIEDRA" && CorrecionOpcionSegundoJugador == "PAPEL") {
+                        alert(NombreSegundoJugadorEjercicio10 + " El Segundo Jugador, Ha GANADO, PAPEL destruye PIEDRA");
+                    } else if (CorrecionOpcionPrimerJugador == "TIJERA" && CorrecionOpcionSegundoJugador == "PAPEL") {
+                        alert(NombrePrimerJugadorEjercicio10 + " El Primer Jugador, Ha GANADO, TIJERA destruye PAPEL");
+                    } else if (CorrecionOpcionPrimerJugador == "PAPEL" && CorrecionOpcionSegundoJugador == "TIJERA") {
+                        alert(NombreSegundoJugadorEjercicio10 + " El Segundo Jugador, Ha GANADO, TIJERA destruye PAPEL");
+                    }
 
-            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                    alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                } else {
+                    alert(
+                        "El Jugador: " +
+                            NombreSegundoJugadorEjercicio10 +
+                            ", ha hecho TRAMPA. Vuelve a intentarlo. Solo puedes Ingresar 'PIEDRA' o 'PAPEL' o 'TIJERA'"
+                    );
+                    alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                }
+            } else {
+                alert(
+                    "El Jugador: " +
+                        NombrePrimerJugadorEjercicio10 +
+                        ", ha hecho TRAMPA. Vuelve a intentarlo. Solo puedes Ingresar 'PIEDRA' o 'PAPEL' o 'TIJERA'"
+                );
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            }
+
             break;
 
         case "11":
