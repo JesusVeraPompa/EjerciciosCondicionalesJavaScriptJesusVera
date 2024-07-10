@@ -124,21 +124,59 @@ setTimeout(function () {
             alert(
                 "Realizar un programa que dado 2 objetos representando personas con las propiedades nombre, edad y altura imprima por pantalla cual de las 2 personas es la mas alta y cual es la de mayor edad."
             );
-            let NombrePrimeraPersonaEjercicio4 = prompt("Ingresa el NOMBRE de la PRIMERA Persona");
-            let edadPrimeraPersonaEjercicio4 = prompt("Ingresa la EDAD de la PRIMERA Persona");
-            let alturaPrimeraPersonaEjercicio4 = prompt("Ingresa la ALTURA de la PRIMERA Persona");
-            let NombreSegundaPersonaEjercicio4 = prompt("Ingresa el NOMBRE de la SEGUNDA Persona");
-            let edadSegundaPersonaEjercicio4 = prompt("Ingresa la EDAD de la SEGUNDA Persona");
-            let alturaSegundaPersonaEjercicio4 = prompt("Ingresa la ALTURA de la SEGUNDA Persona");
-            if (alturaPrimeraPersonaEjercicio4 < alturaSegundaPersonaEjercicio4) {
-                alert(NombreSegundaPersonaEjercicio4 + " es mas Alto/Alta que " + NombrePrimeraPersonaEjercicio4);
+            let NombrePrimeraPersonaEjercicio5 = prompt("Ingresa el NOMBRE de la PRIMERA Persona");
+            let EdadPrimeraPersonaEjercicio5 = prompt("Ingresa la EDAD de la PRIMERA Persona");
+            let AlturaPrimeraPersonaEjercicio5 = prompt("Ingresa la ALTURA de la PRIMERA Persona");
+            let NombreSegundaPersonaEjercicio5 = prompt("Ingresa el NOMBRE de la SEGUNDA Persona");
+            let EdadSegundaPersonaEjercicio5 = prompt("Ingresa la EDAD de la SEGUNDA Persona");
+            let AlturaSegundaPersonaEjercicio5 = prompt("Ingresa la ALTURA de la SEGUNDA Persona");
+            if (AlturaPrimeraPersonaEjercicio5 < AlturaSegundaPersonaEjercicio5) {
+                alert(NombreSegundaPersonaEjercicio5 + " es mas Alto/Alta que " + NombrePrimeraPersonaEjercicio5);
             } else {
-                alert(NombrePrimeraPersonaEjercicio4 + " es mas Alto/Alta que " + NombreSegundaPersonaEjercicio4);
+                alert(NombrePrimeraPersonaEjercicio5 + " es mas Alto/Alta que " + NombreSegundaPersonaEjercicio5);
             }
-            if (edadPrimeraPersonaEjercicio4 < edadSegundaPersonaEjercicio4) {
-                alert(NombreSegundaPersonaEjercicio4 + " tiene mas Edad que " + NombrePrimeraPersonaEjercicio4);
+            if (EdadPrimeraPersonaEjercicio5 < EdadSegundaPersonaEjercicio5) {
+                alert(NombreSegundaPersonaEjercicio5 + " tiene mas Edad que " + NombrePrimeraPersonaEjercicio5);
             } else {
-                alert(NombrePrimeraPersonaEjercicio4 + " tiene mas Edad que " + NombreSegundaPersonaEjercicio4);
+                alert(NombrePrimeraPersonaEjercicio5 + " tiene mas Edad que " + NombreSegundaPersonaEjercicio5);
+            }
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "6":
+            alert("Bienvenidos al Ejercicio 6");
+            alert(
+                "Realizar un programa que permita ingresar por pantalla tu nombre, edad, altura, visión y permita determinar si estas capacitado para conducir. La persona deberá cumplir con una edad mínima de 18 años, medir mas de 150cm y tener una visión de 8 de 10 como mínimo."
+            );
+            let NombrePrimeraPersonaEjercicio6 = prompt("Ingresa tu NOMBRE");
+            let EdadPrimeraPersonaEjercicio6 = prompt("Ingresa tu EDAD");
+            let AlturaPrimeraPersonaEjercicio6 = prompt("Ingresa tu ALTURA");
+            let VisionPrimeraPersonaEjercicio6 = prompt("Ingresa tu VISION");
+            if (
+                EdadPrimeraPersonaEjercicio6 >= 18 &&
+                AlturaPrimeraPersonaEjercicio6 >= 150 &&
+                VisionPrimeraPersonaEjercicio6 >= 8 &&
+                VisionPrimeraPersonaEjercicio6 <= 10
+            ) {
+                alert(
+                    NombrePrimeraPersonaEjercicio6 +
+                        ", SI estas capacitado para conducir. Tu edad es: " +
+                        EdadPrimeraPersonaEjercicio6 +
+                        ", tu altura es: " +
+                        AlturaPrimeraPersonaEjercicio6 +
+                        ", tu vision es: " +
+                        VisionPrimeraPersonaEjercicio6
+                );
+            } else {
+                alert(
+                    NombrePrimeraPersonaEjercicio6 +
+                        ", No estas capacitado para conducir. Tu edad es: " +
+                        EdadPrimeraPersonaEjercicio6 +
+                        ", tu altura es: " +
+                        AlturaPrimeraPersonaEjercicio6 +
+                        ", tu vision es: " +
+                        VisionPrimeraPersonaEjercicio6
+                );
             }
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
