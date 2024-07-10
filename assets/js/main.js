@@ -391,7 +391,7 @@ setTimeout(function () {
             break;
 
         case "11":
-            alert("En preparacion el Ejercicio 11");
+            alert("Bienvenidos al Ejercicio 11");
 
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
