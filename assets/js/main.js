@@ -392,7 +392,36 @@ setTimeout(function () {
 
         case "11":
             alert("Bienvenidos al Ejercicio 11");
+            alert(
+                "Realizar un programa que permita el ingreso de un color y utilizando “switch” mostrar por pantalla los siguientes mensajes según las opciones: Blanco o Negro: Falta de color, Verde: El color de la naturaleza, Azul: El color del agua, Amarillo: El color del sol, Rojo: El color del fuego, Marrón: el color de la tierra, y para cualquier otro valor: Excelente elección, no lo teníamos pensado."
+            );
+            let ColorEjercicio11 = prompt("Ingresa un Color");
+            let CorrecionColor = ColorEjercicio11.toLowerCase();
+            switch (CorrecionColor) {
+                case "verde":
+                    alert("El color de la naturaleza");
+                    break;
+                case "azul":
+                    alert("El color del agua");
+                    break;
+                case "amarillo":
+                    alert("El color del s");
+                    break;
+                case "rojo":
+                    alert("El color del fuego");
+                    break;
+                case "marron":
+                    alert("El color de la tierra");
+                    break;
+                case "blanco" && "negro":
+                    alert("Falta de color");
+                    break;
 
+                default:
+                    alert("Excelente elección, no lo teníamos pensado.");
+
+                    break;
+            }
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
 
