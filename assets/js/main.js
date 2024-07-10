@@ -396,46 +396,109 @@ setTimeout(function () {
                 "Realizar un programa que permita el ingreso de un color y utilizando “switch” mostrar por pantalla los siguientes mensajes según las opciones: Blanco o Negro: Falta de color, Verde: El color de la naturaleza, Azul: El color del agua, Amarillo: El color del sol, Rojo: El color del fuego, Marrón: el color de la tierra, y para cualquier otro valor: Excelente elección, no lo teníamos pensado."
             );
             let ColorEjercicio11 = prompt("Ingresa un Color");
-            let CorrecionColor = ColorEjercicio11.toLowerCase();
-            switch (CorrecionColor) {
-                case "verde":
-                    alert("El color de la naturaleza");
-                    break;
-                case "azul":
-                    alert("El color del agua");
-                    break;
-                case "amarillo":
-                    alert("El color del s");
-                    break;
-                case "rojo":
-                    alert("El color del fuego");
-                    break;
-                case "marron":
-                    alert("El color de la tierra");
-                    break;
-                case "blanco" && "negro":
-                    alert("Falta de color");
-                    break;
+            var ValoresAceptados = /^[0-9]+$/;
+            if (ColorEjercicio11 == "") {
+                alert("ERROR: Debes Ingresar un Color");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+            } else if (ColorEjercicio11.match(ValoresAceptados)) {
+                alert("ERROR: Los colores no se representan en Numerico, Debes Ingresar un Color en Texto");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                break;
+            } else {
+                switch (ColorEjercicio11) {
+                    case "verde":
+                        alert("El color de la naturaleza");
+                        break;
+                    case "azul":
+                        alert("El color del agua");
+                        break;
+                    case "amarillo":
+                        alert("El color del s");
+                        break;
+                    case "rojo":
+                        alert("El color del fuego");
+                        break;
+                    case "marron":
+                        alert("El color de la tierra");
+                        break;
+                    case "blanco" && "negro":
+                        alert("Falta de color");
+                        break;
 
-                default:
-                    alert("Excelente elección, no lo teníamos pensado.");
-
-                    break;
+                    default:
+                        alert("Excelente elección, no lo teníamos pensado.");
+                        break;
+                }
             }
+
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
 
         case "12":
-            alert("En preparacion el Ejercicio 12");
+            alert("Bienvenidos al Ejercicio 12");
+            alert(
+                "Realizar un programa que permita el ingreso de 2 valores numéricos y una operación. Según sea la operación ingresada (suma, resta, multiplicación, división) el programa deberá mostrar en pantalla un mensaje junto con el resultado. En caso de haber elegido división realizar la operación siempre que sea posible o mostrar un mensaje de ERROR si el divisor ingresado fue 0."
+            );
+            let Numero1Ejercicio12 = prompt("Ingresa el Primer Numero");
+            let Numero2Ejercicio12 = prompt("Ingresa el Segundo Numero");
+            let OperacionEjercicio12 = prompt("Ingresa la Operación (suma, resta, multiplicacion, division)");
+            var ValoresAceptados = /^[0-9]+$/;
+            if (Numero1Ejercicio12 == "" && Numero2Ejercicio12 == "") {
+                alert("ERROR: Debes Ingresar un Valor");
+            } else if (Numero1Ejercicio12.match(ValoresAceptados) && Numero2Ejercicio12.match(ValoresAceptados)) {
+                switch (OperacionEjercicio12) {
+                    case "suma":
+                        let suma = parseInt(Numero1Ejercicio12) + parseInt(Numero2Ejercicio12);
+                        alert("La suma es: " + suma);
+                        break;
+                    case "resta":
+                        let resta = parseInt(Numero1Ejercicio12) - parseInt(Numero2Ejercicio12);
+                        alert("La resta es: " + resta);
+                        break;
+                    case "multiplicacion":
+                        let multiplicacion = parseInt(Numero1Ejercicio12) * parseInt(Numero2Ejercicio12);
+                        alert("La multiplicacion es: " + multiplicacion);
+                        break;
+                    case "division":
+                        if (Numero1Ejercicio12 == 0 || Numero2Ejercicio12 == 0) {
+                            alert("ERROR: No se puede dividir entre 0");
+                            alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                            break;
+                        } else {
+                            let division = parseInt(Numero1Ejercicio12) / parseInt(Numero2Ejercicio12);
+                            alert("La division es: " + division);
+                        }
+                        break;
+
+                    default:
+                        alert("ERROR: Debes elegir una Operacion (suma, resta, multiplicacion, division)");
+                        alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                        break;
+                }
+                break;
+            } else {
+                alert("ERROR: Debes Ingresar un Valor NUMERICO");
+            }
 
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+
             break;
 
         case "13":
-            alert("En preparacion el Ejercicio 13");
-
+            alert("Bienvenidos al Ejercicio 13");
+            alert(
+                "Crear un programa que permita ingresar todos los datos de tu documento nacional de identidad, mostrar por pantalla un mensaje que imprima todos los datos ingresados y pregunte si están correctos los mismos. En caso afirmativo, crear un objeto llamado dni con todos los datos ingresados y mostrarlos por consola con console.table() mas un mensaje de registro exitoso, en caso de que la persona rechace confirmar los datos, mostrar un mensaje que diga: vuelva a intentarlo en 1 mes."
+            );
+            /*let isBoss = confirm("¿Eres el jefe?");
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            break;
+            break;*/
+            let dato = prompt("ijij");
+            var valoresAceptados = /^[0-9]+$/;
+            if (dato.match(valoresAceptados)) {
+                alert("Es numérico");
+            } else {
+                alert("No es numérico");
+            }
 
         default:
             alert("Debes ingresar un numero del 1 al 13 para ver el Ejercicio, vuelve a cargar la pagina con F5");
