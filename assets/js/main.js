@@ -445,6 +445,8 @@ setTimeout(function () {
             var ValoresAceptados = /^[0-9]+$/;
             if (Numero1Ejercicio12 == "" && Numero2Ejercicio12 == "") {
                 alert("ERROR: Debes Ingresar un Valor");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                break;
             } else if (Numero1Ejercicio12.match(ValoresAceptados) && Numero2Ejercicio12.match(ValoresAceptados)) {
                 switch (OperacionEjercicio12) {
                     case "suma":
@@ -489,16 +491,51 @@ setTimeout(function () {
             alert(
                 "Crear un programa que permita ingresar todos los datos de tu documento nacional de identidad, mostrar por pantalla un mensaje que imprima todos los datos ingresados y pregunte si están correctos los mismos. En caso afirmativo, crear un objeto llamado dni con todos los datos ingresados y mostrarlos por consola con console.table() mas un mensaje de registro exitoso, en caso de que la persona rechace confirmar los datos, mostrar un mensaje que diga: vuelva a intentarlo en 1 mes."
             );
-            /*let isBoss = confirm("¿Eres el jefe?");
-            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
-            break;*/
-            let dato = prompt("ijij");
-            var valoresAceptados = /^[0-9]+$/;
-            if (dato.match(valoresAceptados)) {
-                alert("Es numérico");
+            let NombreEjercicio13 = prompt("Ingresa tu Nombre");
+            let ApellidoEjercicio13 = prompt("Ingresa tu Apellido");
+            let FechaNacimientoEjercicio13 = prompt("Ingresa tu Fecha de Nacimiento (DD/MM/YYYY)");
+            let GeneroEjercicio13 = prompt("Ingresa tu Genero (Masculino/Femenino)");
+            let CorrecionGeneroEjercicio13 = GeneroEjercicio13.toLowerCase();
+            let DniEjercicio13 = prompt("Ingresa tu DNI");
+            var ValoresAceptados = /^[0-9]+$/;
+            if (
+                NombreEjercicio13 == "" ||
+                ApellidoEjercicio13 == "" ||
+                FechaNacimientoEjercicio13 == "" ||
+                GeneroEjercicio13 == "" ||
+                DniEjercicio13 == ""
+            ) {
+                alert("ERROR: Debes Ingresar Datos Vacios");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                break;
+            } else if (DniEjercicio13.match(ValoresAceptados)) {
+                if (CorrecionGeneroEjercicio13 == "masculino" || CorrecionGeneroEjercicio13 == "femenino") {
+                    let ConfirmarDatosEjercicio13 = confirm("Estas seguro de los datos ingresados?");
+                    if (ConfirmarDatosEjercicio13) {
+                        let dni = {
+                            Nombre: NombreEjercicio13,
+                            Apellido: ApellidoEjercicio13,
+                            FechaNacimiento: FechaNacimientoEjercicio13,
+                            Genero: GeneroEjercicio13,
+                            Dni: DniEjercicio13,
+                        };
+                        console.table(dni);
+                        alert("Registro Exitoso");
+                    } else {
+                        alert("Vuelva a intentarlo en 1 mes");
+                    }
+                } else {
+                    alert("ERROR: Debe Ingresar El Genero Masculino o Femenino");
+                    alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                    break;
+                }
             } else {
-                alert("No es numérico");
+                alert("ERROR: El DNI no puede contener Texto");
+                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                break;
             }
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
 
         default:
             alert("Debes ingresar un numero del 1 al 13 para ver el Ejercicio, vuelve a cargar la pagina con F5");
