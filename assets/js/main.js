@@ -190,7 +190,61 @@ setTimeout(function () {
             break;
 
         case "8":
-            alert("En preparacion el Ejercicio 8");
+            alert("Bienvenidos al Ejercicio 8");
+            alert(
+                "Realizar un juego de adivinanza estableciendo un valor entre 1 y 10 en una variable llamada numeroIncognita y que permita en 3 intentos adivinar el número. El usuario deberá ingresar un numero del 1 al 10 por pantalla en 3 intentos el cual se deberá guardar en una variable llamada numeroIngresado, y en cada intento deberás mostrarle un mensaje al usuario diciendo: “el numero ingresado es mayor, vuelve a intentarlo” o “el numero ingresado es menor, vuelve a intentarlo” o en caso de adivinar, un mensaje que diga: “Ganaste, haz adivinado el número.” No te preocupes si usas mucho código repetido, mas adelante veraz como realizar este juego de manera más eficiente."
+            );
+            var NumeroAlzar = Math.floor(Math.random() * 10);
+            alert("Ya esta Definido un Numero al Azar");
+            console.log(NumeroAlzar);
+            let NumeroPrimerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Primer Intento -");
+            if (NumeroPrimerIntentoEjercicio8 == NumeroAlzar) {
+                alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+            } else if (NumeroPrimerIntentoEjercicio8 > NumeroAlzar) {
+                alert("El numero ingresado es Mayor al Numero al Azar, vuelve a intentarlo.");
+                let NumeroSegundoIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Segundo Intento -");
+                if (NumeroSegundoIntentoEjercicio8 == NumeroAlzar) {
+                    alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                } else if (NumeroSegundoIntentoEjercicio8 > NumeroAlzar) {
+                    alert("El numero ingresado es Mayor al Numero al Azar, vuelve a intentarlo.");
+                    let NumeroTercerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Tercer y Ultimo Intento -");
+                    if (NumeroTercerIntentoEjercicio8 == NumeroAlzar) {
+                        alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                    } else {
+                        alert("Lo siento haz Perdido. El numero Alzar era: " + NumeroAlzar);
+                    }
+                } else if (NumeroSegundoIntentoEjercicio8 < NumeroAlzar) {
+                    alert("El numero ingresado es Menor al Numero al Azar, vuelve a intentarlo.");
+                    let NumeroTercerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Tercer y Ultimo Intento -");
+                    if (NumeroTercerIntentoEjercicio8 == NumeroAlzar) {
+                        alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                    } else {
+                        alert("Lo siento haz Perdido. El numero Alzar era: " + NumeroAlzar);
+                    }
+                }
+            } else if (NumeroPrimerIntentoEjercicio8 < NumeroAlzar) {
+                alert("El numero ingresado es Menor al Numero al Azar, vuelve a intentarlo.");
+                let NumeroSegundoIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Segundo Intento -");
+                if (NumeroSegundoIntentoEjercicio8 == NumeroAlzar) {
+                    alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                } else if (NumeroSegundoIntentoEjercicio8 > NumeroAlzar) {
+                    alert("El numero ingresado es Mayor al Numero al Azar, vuelve a intentarlo.");
+                    let NumeroTercerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Tercer y Ultimo Intento -");
+                    if (NumeroTercerIntentoEjercicio8 == NumeroAlzar) {
+                        alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                    } else {
+                        alert("Lo siento haz Perdido. El numero Alzar era: " + NumeroAlzar);
+                    }
+                } else if (NumeroSegundoIntentoEjercicio8 < NumeroAlzar) {
+                    alert("El numero ingresado es Menor al Numero al Azar, vuelve a intentarlo.");
+                    let NumeroTercerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Tercer y Ultimo Intento -");
+                    if (NumeroTercerIntentoEjercicio8 == NumeroAlzar) {
+                        alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
+                    } else {
+                        alert("Lo siento haz Perdido. El numero Alzar era: " + NumeroAlzar);
+                    }
+                }
+            }
 
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
@@ -220,7 +274,11 @@ setTimeout(function () {
             break;
 
         case "10":
-            alert("En preparacion el Ejercicio 10");
+            alert("Bienvenidos al Ejercicio 10");
+            alert(
+                "Crear un programa que permita el ingreso de “PIEDRA”, “PAPEL” o “TIJERAS” a 2 jugadores y muestre en pantalla cual de los 2 ha ganado o si han empatado. En caso de algún ingreso incorrecto mostrar por pantalla que uno de los jugadores ha hecho trampa."
+            );
+            let NombrePrimeraPersonaEjercicio10 = prompt("Ingresa tu NOMBRE");
 
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
