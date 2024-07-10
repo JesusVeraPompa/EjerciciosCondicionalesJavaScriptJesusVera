@@ -184,9 +184,73 @@ setTimeout(function () {
             break;
 
         case "7":
-            alert("En preparacion el Ejercicio 7");
+            alert("Bienvenidos al Ejercicio 7");
+            alert(
+                "Realizar un programa que permita el ingreso de los siguientes datos: Nombre, pase (vip o normal), si posee entrada (si o no, s o n, true o false). Las personas que posean tu mismo nombre tienen ingreso libre así como también los que posean un pase vip, mostrar un mensaje de bienvenida. Si posee entrada preguntar si desea utilizarla, en caso afirmativo mostrar mismo mensaje de bienvenida. Y por último de no tener el mismo nombre o poseer un pase vip o entrada, preguntar si desea comprar, caso afirmativo solicitar dinero disponible, si posee $1000 o más, mostrar mensaje de venta de entrada y bienvenida, caso contrario mostrar mensaje de rechazo de venta, y en caso contrario a no querer comprar, mostrar mensaje de despedida."
+            );
+            let NombrePersonaEjercicio7 = prompt("Ingresa tu NOMBRE");
+            const NombreDesarrollador = "jesus";
+            let CorrecionNombre = NombrePersonaEjercicio7.toLowerCase();
+            if (CorrecionNombre == NombreDesarrollador) {
+                alert("Bienvenido, Como tienes el mismo Nombre que del Desarrollador, Puedes Entrar");
+                alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            } else {
+                let paseEjercicio7 = prompt("'Escriba 1 = si su Pase es VIP' o 'Escriba 2 = si su Pase es NORMAL' o 'Escriba 3 = si NO tienes Pase'");
+                switch (paseEjercicio7) {
+                    case "1":
+                        alert("Bienvenido, Como tienes Pase VIP, Puedes Entrar");
+                        alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                        break;
+                    case "2":
+                        alert("Bienvenido, Como tienes Pase NORMAL, Puedes Entrar PERO debes esperar 10 Minutos.");
+                        alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                        break;
+                    case "3":
+                        let entradaEjercicio7 = prompt("'Escriba 1 = si posee Entrada' o 'Escriba 2 = si No posee Entrada'");
+                        switch (entradaEjercicio7) {
+                            case "1":
+                                alert("Bienvenido, Como tienes Entrada, Puedes Entrar");
+                                alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                                break;
+                            case "2":
+                                let CompraEntrada = prompt(
+                                    "Notamos que NO tienes Pase y tampoco Entrada, te gustaria comprarla, tiene un costo de $1000. 'Escriba 1 = Si deseas comprarla' o 'Escriba 2 = si No deseas comprarla'"
+                                );
+                                switch (CompraEntrada) {
+                                    case "1":
+                                        alert("Compra Aceptada, Bienvenido, Puedes Entrar");
+                                        alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                                        break;
+                                    case "2":
+                                        alert("Lo sientimos, pero NO tienes Pase y tampoco Entrada, No Puedes Entrar");
+                                        alert("Hasta Luego");
+                                        alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                                        break;
 
-            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+                                    default:
+                                        alert(
+                                            "Lo siento, dato ingresado ERRONEO: 'Escriba 1 = Si deseas comprarla' o 'Escriba 2 = si No deseas comprarla'"
+                                        );
+                                        alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                                        break;
+                                }
+                                break;
+
+                            default:
+                                alert("Lo siento, dato ingresado ERRONEO: 'Escriba 1 = si posee Entrada' o 'Escriba 2 = si No posee Entrada'");
+                                alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                                break;
+                        }
+                        break;
+
+                    default:
+                        alert(
+                            "Lo siento, dato ingresado ERRONEO: 'Escriba 1 = si su pase es VIP' o 'Escriba 2 = si su pase es NORMAL' o 'Escriba 3 = si NO tienes pase'"
+                        );
+                        alert("Vuelve a cargar la pagina con F5 para REPETIR el Ejercicio");
+                        break;
+                }
+            }
             break;
 
         case "8":
@@ -196,7 +260,7 @@ setTimeout(function () {
             );
             var NumeroAlzar = Math.floor(Math.random() * 10);
             alert("Ya esta Definido un Numero al Azar");
-            console.log(NumeroAlzar);
+            //console.log(NumeroAlzar);
             let NumeroPrimerIntentoEjercicio8 = prompt("Adivina el Numero entre el 1 y el 10, - Primer Intento -");
             if (NumeroPrimerIntentoEjercicio8 == NumeroAlzar) {
                 alert("Ganaste, haz adivinado el numero. El numero Alzar era: " + NumeroAlzar);
