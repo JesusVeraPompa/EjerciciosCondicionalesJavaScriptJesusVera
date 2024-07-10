@@ -159,7 +159,8 @@ setTimeout(function () {
                 VisionPrimeraPersonaEjercicio6 <= 10
             ) {
                 alert(
-                    NombrePrimeraPersonaEjercicio6 +
+                    "Felicidades " +
+                        NombrePrimeraPersonaEjercicio6 +
                         ", SI estas capacitado para conducir. Tu edad es: " +
                         EdadPrimeraPersonaEjercicio6 +
                         ", tu altura es: " +
@@ -169,7 +170,8 @@ setTimeout(function () {
                 );
             } else {
                 alert(
-                    NombrePrimeraPersonaEjercicio6 +
+                    "Lo lamentamos " +
+                        NombrePrimeraPersonaEjercicio6 +
                         ", No estas capacitado para conducir. Tu edad es: " +
                         EdadPrimeraPersonaEjercicio6 +
                         ", tu altura es: " +
@@ -178,6 +180,48 @@ setTimeout(function () {
                         VisionPrimeraPersonaEjercicio6
                 );
             }
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "7":
+            alert("En preparacion el Ejercicio 7");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "8":
+            alert("En preparacion el Ejercicio 8");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "9":
+            alert("En preparacion el Ejercicio 9");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "10":
+            alert("En preparacion el Ejercicio 10");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "11":
+            alert("En preparacion el Ejercicio 11");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "12":
+            alert("En preparacion el Ejercicio 12");
+
+            alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
+            break;
+
+        case "13":
+            alert("En preparacion el Ejercicio 13");
+
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
 
