@@ -196,7 +196,25 @@ setTimeout(function () {
             break;
 
         case "9":
-            alert("En preparacion el Ejercicio 9");
+            alert("Bienvenidos al Ejercicio 9");
+            alert(
+                "Crear un programa que permita ingresar tu edad y decir si eres un infante (0 a 12 años), adolescente (13 a 18 años), un mayor joven (19 a 45 años) o un anciano (mas de 45 años), y en caso de ingresar una edad mayor a 100 mostrar un mensaje preguntando si en realidad tiene esa edad."
+            );
+            let NombrePrimeraPersonaEjercicio9 = prompt("Ingresa tu NOMBRE");
+            let EdadPrimeraPersonaEjercicio9 = prompt("Ingresa tu EDAD");
+            if (EdadPrimeraPersonaEjercicio9 > 100) {
+                alert(
+                    "Lo siento " + NombrePrimeraPersonaEjercicio9 + ", pero en Realidad tienes esa Edad. Tu edad es: " + EdadPrimeraPersonaEjercicio9
+                );
+            } else if (EdadPrimeraPersonaEjercicio9 >= 0 && EdadPrimeraPersonaEjercicio9 <= 12) {
+                alert(NombrePrimeraPersonaEjercicio9 + ", eres un Infante. Tu edad es: " + EdadPrimeraPersonaEjercicio9);
+            } else if (EdadPrimeraPersonaEjercicio9 >= 13 && EdadPrimeraPersonaEjercicio9 <= 18) {
+                alert(NombrePrimeraPersonaEjercicio9 + ", eres un Adolescente. Tu edad es: " + EdadPrimeraPersonaEjercicio9);
+            } else if (EdadPrimeraPersonaEjercicio9 >= 19 && EdadPrimeraPersonaEjercicio9 <= 45) {
+                alert(NombrePrimeraPersonaEjercicio9 + ", eres un Mayor Joven. Tu edad es: " + EdadPrimeraPersonaEjercicio9);
+            } else if (EdadPrimeraPersonaEjercicio9 > 45) {
+                alert(NombrePrimeraPersonaEjercicio9 + ", eres un Anciano. Tu edad es: " + EdadPrimeraPersonaEjercicio9);
+            }
 
             alert("Vuelve a cargar la pagina con F5 para ver otro Ejercicio");
             break;
